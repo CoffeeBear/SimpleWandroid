@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_6"
+    android:layout_marginEnd="@dimen/dp_12"
+    android:layout_marginStart="@dimen/dp_12"
+    android:layout_marginTop="@dimen/dp_6"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/colorCard"
+    app:cardCornerRadius="@dimen/dp_4"
+    app:cardElevation="@dimen/dp_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <ImageView
+            android:id="@+id/item_project_list_iv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_weight="5">
+
+            <TextView
+                android:id="@+id/item_project_list_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableStart="@mipmap/icon_author"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/comment_text"
+                android:textSize="@dimen/sp_16"
+                tools:text="WanAndroid模块化响应式客户端 很赞" />
+
+            <TextView
+                android:id="@+id/item_project_list_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_project_list_title_tv"
+                android:layout_marginTop="@dimen/dp_16"
+                android:ellipsize="end"
+                android:maxLines="4"
+                tools:text="Kotlin + MVVM + 模块化 + 响应式 的WanAndroid客户端，简约优雅。\r\n\r\n## 技术点\r\n* 基于APT和ASM的GRouter路由框架实现模块化通信；\r\n* 参考Redux的原理，实现一套事件总线框架；\r\n* 封装MVVM和UI库，可供其他应用使用；\r\n* 项目整体使用响应式编程风格，简介优雅易读。"
+                android:textColor="@color/comment_text" />
+
+                <TextView
+                    android:id="@+id/item_project_list_time_and_author_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@id/item_project_list_content_tv"
+                    android:gravity="center"
+                    tools:text="2018-01-29  onename"
+                    android:textColor="@color/comment_text" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
